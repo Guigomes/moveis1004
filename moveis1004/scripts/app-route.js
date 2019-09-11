@@ -44,57 +44,6 @@ angular
             templateUrl: "./pages/inicio.html"
           }
         }
-      })
-      .state("admin", {
-        url: "/admin",
-        name: "admin",
-        views: {
-          viewContent: {
-            controller: "LoginController",
-            controllerAs: "vm",
-            templateUrl: "/pages/login.html"
-          }
-        }
-      }).state("logado", {
-        url: "/logado",
-        name: "logado",
-        views: {
-          viewContent: {
-            controller: "AdminController",
-            controllerAs: "vm",
-            templateUrl: "/pages/admin.html",
-          }
-        }
-      }).state("editar", {
-        url: "/editar",
-        name: "editar",
-        views: {
-          viewContent: {
-            controller: "EditarController",
-            controllerAs: "vm",
-            templateUrl: "/pages/editar.html",
-          }
-        }
-      }).state("editar-noticias", {
-        url: "/editar-noticias",
-        name: "editarNoticias",
-        views: {
-          viewContent: {
-            controller: "EditarNoticiasController",
-            controllerAs: "vm",
-            templateUrl: "/pages/noticias.html",
-          }
-        }
-      }).state("mudanca", {
-        url: "/mudanca/:id",
-        name: "mudanca",
-        views: {
-          viewContent: {
-            controller: "MudancaController",
-            controllerAs: "vm",
-            templateUrl: "/pages/mudanca.html",
-          }
-        }
       });
 
     $urlRouterProvider.otherwise("/");
