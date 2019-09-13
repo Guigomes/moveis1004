@@ -1,27 +1,27 @@
-<md-content>
-    <h2>Em construção</h2>
-    <md-card class="md-padding" style="margin-top: 15px;" id="escritorio">
-        <h2>
-            <a>Quem Somos</a>
-        </h2>
-        <md-divider></md-divider>
+<md-content class="md-padding" layout-xs="column" layout="row">
+    <div flex-xs flex-gt-xs="50" layout="row">
 
-        <md-card-content class="md-padding no-padding-vertical" style="text-align: justify" layout="row"
-            layout-align="center start">
-            <div layout="row">
-                <div layout="column" flex="100">
+        <md-card class="card-image" ng-repeat="movel in vm.moveis">
+            <md-card-header>
+                <md-card-header-text>
+                    <span class="md-title">{{movel.nome}}</span>
+                    <span class="md-subhead">{{movel.valor}}</span>
+                </md-card-header-text>
+            </md-card-header>
+            <img ng-src="{{movel.imagem}}" class="md-card-image imagem-movel" alt="imagem não encontrada"
+                ng-click="vm.abrirModalImagem(movel);">
 
+            <md-card-content>
+                <p>
+                    {{movel.descricao}}
+                </p>
 
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="center center">
+                <md-button ng-click="vm.abrirModalInteressado(movel)">Estou interessado</md-button>
 
+            </md-card-actions>
+        </md-card>
 
-                    <p class="animated fadeIn once" ng-show="!vm.progressQuemSomos"> {{vm.textoQuemSomos}}
-                    </p>
-                </div>
-
-            </div>
-        </md-card-content>
-
-
-
-    </md-card>
+    </div>
 </md-content>
