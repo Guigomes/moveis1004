@@ -1,6 +1,6 @@
 angular.module("app").controller("InicioController", InicioController);
 
-function InicioController($location, $anchorScroll, $interval, Textos, $scope, $mdDialog, Toast, $sce) {
+function InicioController($location, $anchorScroll, $interval, $scope, $mdDialog, Toast, $sce) {
   var vm = this;
 
   vm.abrirModalImagem = abrirModalImagem;
@@ -39,14 +39,17 @@ function InicioController($location, $anchorScroll, $interval, Textos, $scope, $
 
   }
 
-  function abrirModalInteressado(movel) {
+  function abrirModalInteressado(ev, movel) {
     $mdDialog.show({
         controller: 'InteressadoController',
         controllerAs: 'vm',
         templateUrl: '../pages/interessadoModal.html',
         parent: angular.element(document.body),
-
+        targetEvent: ev,
         clickOutsideToClose: true,
+        locals: {
+          items: movel
+        },
         fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
       })
       .then(function (answer) {

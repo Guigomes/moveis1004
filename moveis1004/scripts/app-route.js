@@ -3,7 +3,7 @@ angular
   .config(function ($mdThemingProvider, $stateProvider, $urlRouterProvider, $mdDateLocaleProvider, $locationProvider) {
     $mdThemingProvider
       .theme("default")
-      .primaryPalette("blue")
+      .primaryPalette("green")
       .accentPalette("red");
 
     $locationProvider.html5Mode(true);

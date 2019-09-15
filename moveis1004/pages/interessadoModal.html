@@ -1,16 +1,31 @@
-<md-dialog aria-label="Mango (Fruit)">
-    <md-dialog-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
-        <div>
-            <md-input-container>
+<md-dialog>
+
+    <md-dialog-content layout-gt-sm="column" layout-padding>
+        <h3>Obrigado pelo interrese. Informe seu nome e telefone que em breve entrarei em contato.</h3>
+        <md-content class="md-no-momentum" flex>
+            <div layout="row" layout-align="start center">
+                <img ng-src="{{vm.movel.imagem}}" class="card-image-thumbnail" />{{vm.movel.nome}}
+            </div>
+            <md-input-container class="md-icon-float md-block">
+                <!-- Use floating label instead of placeholder -->
                 <label>Nome</label>
-                <input ng-model="user.title">
+                <md-icon md-svg-src="images/ic_person_24px.svg" class="name"></md-icon>
+                <input ng-model="vm.nome" type="text">
             </md-input-container>
 
-            <md-input-container>
+            <md-input-container class="md-icon-float md-block">
                 <label>Telefone</label>
-                <input ng-model="user.email" type="telefone">
+                <md-icon md-svg-src="images/ic_phone_24px.svg"></md-icon>
+                <input ng-model="vm.telefone" type="tel" aria-label="Telefone">
             </md-input-container>
-        </div>
-    </md-dialog-content>
 
+        </md-content>
+
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+        <md-button class="md-primary md-raised" md-autofocus ng-click="vm.enviarInteresse();">
+            Enviar
+        </md-button>
+
+    </md-dialog-actions>
 </md-dialog>

@@ -49,8 +49,8 @@
   <!-- Aplicação -->
   <script src="scripts/app.js"></script>
   <script src="scripts/app-route.js"></script>
-  <script src="scripts/services/texto.service.js"></script>
-  <script src="scripts/services/noticia.service.js"></script>
+  <script src="scripts/services/interesse.service.js"></script>
+
   <script src="scripts/services/toast.service.js"></script>
   <script src="scripts/controllers/inicio.controller.js"></script>
   <script src="scripts/controllers/interessado.controller.js"></script>
@@ -144,12 +144,31 @@
       }
     }
   </style>
+  <style>
+    @font-face {
+      font-family: "icomoon";
+      src: url("https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.eot");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'icomoon';
+      src: url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.eot?-cmq1um');
+      src: url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.eot?#iefix-cmq1um') format('embedded-opentype'),
+        url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.woff?-cmq1um') format('woff'),
+        url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.ttf?-cmq1um') format('truetype'),
+        url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.svg?-cmq1um#icomoon') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
 </head>
 
 <body ng-app="app" ng-cloak style="overflow:scroll">
 
 
-  <div class="md-toolbar-tools toolbar-principal toolbar" style="background-color:azure">
+  <div class="md-toolbar-tools md-primary toolbar">
 
     <h1>Moveis 1004</h1>
 
